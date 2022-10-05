@@ -2,11 +2,44 @@ package com.lastestteam.ciclo3.entities;
 
 
 /*import java.management.relation.Role;*/
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "Enterprise")
+@ToString
+public class Enterprise {
+    @Id
+    @Getter
+    @Setter
+    @Column(name = "id")
+    private Long id;
+    @Getter @Setter @Column (name = "name")
+    private String name;
 
+    //@Getter @Setter @Column (name = "email")
+    //private String email;
 
+    @Getter @Setter @Column (name = "document")
+    private String document;
+
+    @Getter @Setter @Column (name = "phone")
+    private String phone;
+
+    @Getter @Setter @Column (name = "address")
+    private String address;
+
+   // @Getter @Setter @Column (name = "transaction")
+    //private String password;
+/*
 public class Enterprise {
     private int id;
     private String name;
@@ -18,7 +51,7 @@ public class Enterprise {
     private List<User> enterpriseslist;
 
 
-    public Enterprise(int id, String name, String document, String phone, String address,/*List<User> userlist,*/ List<Transaction> transaction) {
+    public Enterprise(int id, String name, String document, String phone, String address,List<User> userlist, List<Transaction> transaction) {
         this.id = id;
         this.name = name;
         this.document = document;
@@ -28,12 +61,12 @@ public class Enterprise {
         /*this.user = new User(user.getId(),user.getName(),user.getUsername(),user.getEmail(),user.getPassword());*/
 
         /*this.transactions = transactions;*/
-        /*this.profile = new Profile(profile.getImg(), profile.getPhone(),profile.getUser());*/
+        /*this.profile = new Profile(profile.getImg(), profile.getPhone(),profile.getUser());
         this.transaction = new ArrayList<Transaction>(transaction);
 
         this.enterpriseslist = new ArrayList<User>();
         //this.setName(name);
-
+/*
     }
 
 
@@ -57,7 +90,7 @@ public class Enterprise {
 
 
 ///////
-
+/*
     public int getId() {
         return id;
     }
@@ -104,7 +137,7 @@ public class Enterprise {
 
 
 
-/*    public void addUser(User user){
+    public void addUser(User user){
         this.userlist.add(user);
     }
 
@@ -112,14 +145,14 @@ public class Enterprise {
         return this.userlist;
     }
 
-*/
+
 ///////////////////
 
 
-    /* public void setUser(List<User> user) {
+     public void setUser(List<User> user) {
          this.user = user;
      }
- */
+
     public List<Transaction> getTransaction() {
         return transaction;
     }
@@ -160,9 +193,11 @@ public class Enterprise {
 
    // public void addUser(User user1) {
     //    this.enterprises.add(user1);
-
+/*
     }
 
     //public List<User> getEnterprises() {
     //    return this.enterprises;
+/*
 
+ */

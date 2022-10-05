@@ -1,5 +1,45 @@
 package com.lastestteam.ciclo3.entities;
 
-public enum RoleName {
-    SUPERADMIN, ADMIN, OPERARIO, USUARIO;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//public class RoleName {
+
+@Entity
+@Table(name = "RoleName")
+@ToString
+public class RoleName {
+    @Id
+    @Getter
+    @Setter
+    @Column(name = "id")
+    private Long id;
+    @Getter
+    @Setter
+    @Column(name = "name")
+    private String name;
+/*
+        @Getter @Setter @Column (name = "email")
+        private String email;
+
+        @Getter @Setter @Column (name = "profile")
+        private String profile;
+
+        @Getter @Setter @Column (name = "role")
+        private String role;
+
+        @Getter @Setter @Column (name = "enterprise")
+        private String enterprise;
+
+        @Getter @Setter @Column (name = "password")
+        private String password;/*
+
+ */
+    }
 }

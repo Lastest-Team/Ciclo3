@@ -1,81 +1,51 @@
 package com.lastestteam.ciclo3.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.Hibernate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Objects;
+
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+
 /*import javax.management.relation.Role;*/
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.List;
 
+@Entity
+@Table(name = "Employee")
+@ToString
 public class Employee {
-    private long id;
-
-    private String email;
-    private Profile profile;
-    private RoleName role;
-
+    @Id
+    @Getter @Setter @Column (name = "id")
+    private Long id;
+    @Getter @Setter @Column (name = "name")
     private String name;
-    private Enterprise enterprise;
-    private List<Transaction> transaction;
 
-    public Employee(long id, String name, Profile profile, List<Transaction> transaction, RoleName role, String email, Enterprise enterprise) {
-        this.id = id;
-        this.name = name;
-        this.profile = new Profile(profile.getImg(), profile.getPhone(),profile.getUser());
-        this.transaction = new ArrayList<Transaction>(transaction);
-        this.role = role;
-        this.email = email;
-        this.enterprise = enterprise;
-    }
-    public long getId() {
-        return id;
-    }
+    @Getter @Setter @Column (name = "email")
+    private String email;
 
-    public String getName() {
-        return name;
-    }
+    @Getter @Setter @Column (name = "profile")
+    private String profile;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Getter @Setter @Column (name = "role")
+    private String role;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    @Getter @Setter @Column (name = "enterprise")
+    private String enterprise;
 
-    public Profile getProfile() {
-        return profile;
-    }
+    @Getter @Setter @Column (name = "password")
+    private String password;
+    //@Getter @Setter
 
-    public void setProfile(Profile profile) {
-        this.profile = profile;
-    }
-    public String getEmail() {
-        return email;
-    }
+  //  private List<Transaction> transaction;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Enterprise getEnterprise() { return enterprise; }
-
-    public void setEnterprise(Enterprise enterprise) { this.enterprise = enterprise; }
-
-    public List<Transaction> getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(List<Transaction> transaction) {
-        this.transaction = transaction;
-    }
-
-    public RoleName getRole() {
-        return role;
-    }
-
-    public void setRole(RoleName role) {
-        this.role = role;
-
-    }
-
+/*
     public void showEmployee(){
         System.out.println("ID");
         System.out.println(getId());
@@ -91,6 +61,20 @@ public class Employee {
         System.out.println("-------------");*/
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Employee employee = (Employee) o;
+        return id != null && Objects.equals(id, employee.id);
     }
 
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
+
+    //public void add(Employee employee) {
+//    }
+//}
