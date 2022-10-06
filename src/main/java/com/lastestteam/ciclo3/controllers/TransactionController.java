@@ -1,9 +1,9 @@
 package com.lastestteam.ciclo3.controllers;
 
+//import com.lastesteam.portalsgie.entities.Employee;
 
-
-import com.lastestteam.ciclo3.entities.Profile;
-import com.lastestteam.ciclo3.services.ProfileService;
+import com.lastestteam.ciclo3.entities.Transaction;
+import com.lastestteam.ciclo3.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ProfileController {
+public class TransactionController {
 
 
     @Autowired
 
 
-    private ProfileService profileService;
+    private TransactionService transactionService;
 
-    @RequestMapping(value ="/profile")
+    @RequestMapping(value ="/transaction")
+    //@GetMapping("/enterprises")
+    public List<Transaction> getTransaction() {
 
-    public List<Profile> getProfile() {
-
-     return profileService.getProfile();
+     return transactionService.getTransaction();
 
     }
 
