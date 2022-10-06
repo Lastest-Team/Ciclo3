@@ -14,8 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 //import java.util.ArrayList;
 import java.util.List;
 
+@RestController
+public class EmployeeController {
 
 
+    @Autowired
+
+
+    private EmployeeService employeeService;
+
+    @RequestMapping(value ="/employee")
+    //@GetMapping("/enterprises")
+    public List<Employee> getEmployee() {
+
+     return employeeService.getEmployee();
+
+    }
 
     /*
     //@RequestMapping(value ="/employee/{id}")
