@@ -1,5 +1,50 @@
 package com.lastestteam.ciclo3.entities;
 
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Transaction")
+@ToString
+public class Transaction {
+    @Id
+    @Getter
+    @Setter
+    @Column(name = "id")
+    private Long id;
+    @Getter
+    @Setter
+    @Column(name = "concept")
+    private String concept;
+    @Getter
+    @Setter
+    @Column(name = "amount")
+    private String amount;
+    @Getter
+    @Setter
+    @Column(name = "employee_id")
+    private String employee;
+    @Getter
+    @Setter
+    @Column(name = "enterprise_id")
+    private String enterprise;
+    @Getter
+    @Setter
+    @Column(name = "created_at")
+    private String created;
+    @Getter
+    @Setter
+    @Column(name = "updated_at")
+    private String updated;
+
+/*
 public class Transaction {
     private int id;
     private String concept;
@@ -61,5 +106,8 @@ public class Transaction {
         System.out.println(getAmount());
         user.printUser();
         System.out.println("-------------");
+
+        /*
+ */
     }
-}
+//}

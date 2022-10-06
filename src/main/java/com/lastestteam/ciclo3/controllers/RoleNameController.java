@@ -12,16 +12,16 @@ import java.util.List;
 public class RoleNameController {
 
 
-    @Autowired
+    //@Autowired
 
 
-    private RoleNameService rolenameService;
+    //private RoleNameService rolenameService;
 
-    @RequestMapping(value ="/rolename")
+   // @RequestMapping(value ="/rolename")
     //@GetMapping("/enterprises")
-    public List<RoleName> getRoleName() {
+    //public List<RoleName> getRoleName() {
 
-        return rolenameService.getRoleName();
+       // return rolenameService.getRoleName();
 
     }
-}
+//}

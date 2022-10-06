@@ -1,4 +1,4 @@
-package com.lastestteam.ciclo3.services;
+package com.lastestteam.ciclo3.Implement;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
