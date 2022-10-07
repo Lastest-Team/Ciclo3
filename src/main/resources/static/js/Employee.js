@@ -14,10 +14,11 @@ async function loadEmployee(){
       },
     });
     const employee = await request.json();
-    let listHYML= '';
+    let listHTML= '';
+    //let employee1 = employee;
     for (let employee of employee){
-       let employeeHTML = '<tr><td>1</td><td>'+employe.name+'</td><td>'+employe.email+'</td><td>'+employee.role+'</td><td>'+employee.enterprise+'</td><td><a href="#" class="btn btn-danger btclassNamecle btn-sm"></td></tr>';
-        listHYML += employeeHTML;
+       let employeeHTML = '<tr><td>'+employee.id+'</td><td>'+employee.name+'</td><td>'+employee.email+'</td><td>'+employee.role+'</td><td>'+employee.enterprise+'</td><td><a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a></td></tr>';
+        listHTML += employeeHTML;
 
     }
 

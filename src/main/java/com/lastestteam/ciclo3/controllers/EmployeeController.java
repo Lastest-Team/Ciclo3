@@ -1,17 +1,11 @@
 package com.lastestteam.ciclo3.controllers;
 
 import com.lastestteam.ciclo3.entities.Employee;
-
 import com.lastestteam.ciclo3.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -31,7 +25,7 @@ public class EmployeeController {
 
     }
 
-
+/*
     @RequestMapping(value ="/employee/{id}")
     //@RequestMapping(value ="/employee")
     //@GetMapping("/enterprises")
