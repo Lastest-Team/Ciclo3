@@ -1,5 +1,6 @@
 package com.lastestteam.ciclo3.entities;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,7 +20,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Employee")
-@ToString
+@ToString @EqualsAndHashCode
 public class Employee {
     @Id
     @Getter @Setter @Column (name = "id")
