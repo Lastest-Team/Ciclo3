@@ -1,5 +1,8 @@
 package com.lastestteam.ciclo3;
 
+import org.testng.annotations.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

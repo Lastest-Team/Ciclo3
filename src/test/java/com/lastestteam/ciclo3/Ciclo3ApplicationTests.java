@@ -1,7 +1,9 @@
 package com.lastestteam.ciclo3;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class Ciclo3ApplicationTests {
