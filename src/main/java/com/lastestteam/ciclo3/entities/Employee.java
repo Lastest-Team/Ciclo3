@@ -31,14 +31,14 @@ public class Employee {
     @Getter @Setter @Column (name = "email")
     private String email;
 
-    @Getter @Setter @Column (name = "profile")
-    private String profile;
-
     @Getter @Setter @Column (name = "role")
     private String role;
 
     @Getter @Setter @Column (name = "enterprise")
     private String enterprise;
+
+    @Getter @Setter @Column (name = "profile")
+    private String profile;
 
     @Getter @Setter @Column (name = "password")
     private String password;

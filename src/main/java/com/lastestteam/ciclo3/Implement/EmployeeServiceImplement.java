@@ -1,4 +1,6 @@
 package com.lastestteam.ciclo3.Implement;
+
+import com.lastestteam.ciclo3.entities.Employee;
 import com.lastestteam.ciclo3.services.EmployeeService;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +19,7 @@ public class EmployeeServiceImplement implements EmployeeService {
     private EntityManager entityManager;
 
     @Override
-    public List getEmployee() {
+    public List<Employee>  getEmployee() {
         String query = "FROM Employee";
         return entityManager.createQuery(query).getResultList();
 
